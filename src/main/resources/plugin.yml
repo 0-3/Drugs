@@ -1,0 +1,12 @@
+name: Drugs
+main: Drugs
+version: 1.2
+author: EqualRights
+api-version: 1.13
+softdepend:
+  - Vault
+commands:
+  crackhead:
+    description: Creates a crackhead.
+  drug:
+    description: Displays Plugin Info.
