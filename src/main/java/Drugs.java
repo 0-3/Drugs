@@ -66,7 +66,7 @@ public class Drugs extends JavaPlugin {
     }
 
     public static Inventory crackhead(){
-        Inventory drugGui = Bukkit.createInventory(null, 9, ChatColor.DARK_GRAY + "Drugs v1.3" + ChatColor.GRAY + " - Programmed by Ethan");
+        Inventory drugGui = Bukkit.createInventory(null, 9, ChatColor.DARK_GRAY + "Drugs v1.3" + ChatColor.GRAY + " - Made by Ethan");
 
         ItemStack shroomsItem = new ItemStack(Material.RED_MUSHROOM);
         ItemMeta shroomsItemMeta = shroomsItem.getItemMeta();

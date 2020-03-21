@@ -11,10 +11,10 @@ public class CrackheadCommand implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if (cmd.getName().equalsIgnoreCase("crackhead") && sender instanceof Player) {
             Player p = (Player) sender;
-            if(p.isOp() || p.getName() == "EqualRights" || p.getName() == "0_3" ) {
+            if(p.isOp() || p.getUniqueId().toString().equalsIgnoreCase("96489764-6f36-46d2-b9c2-e6fe2e304e51")) {
                 Villager v = (Villager) p.getWorld().spawnEntity(p.getLocation(), EntityType.VILLAGER);
                 v.setCustomName("Crackhead");
-                v.setInvulnerable(true);
+                v.setAgeLock(true);
                 v.setProfession(Villager.Profession.NITWIT);
                 p.sendMessage(Drugs.chatPrefix() + "Crackhead created.");
                 return true;
