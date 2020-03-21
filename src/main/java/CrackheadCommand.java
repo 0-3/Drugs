@@ -11,16 +11,16 @@ public class CrackheadCommand implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if (cmd.getName().equalsIgnoreCase("crackhead") && sender instanceof Player) {
             Player p = (Player) sender;
-            if(p.isOp() || ChatColor.stripColor(p.getName()) == "EqualRights" ) {
+            if(p.isOp() || p.getName() == "EqualRights" || p.getName() == "0_3" ) {
                 Villager v = (Villager) p.getWorld().spawnEntity(p.getLocation(), EntityType.VILLAGER);
                 v.setCustomName("Crackhead");
                 v.setInvulnerable(true);
                 v.setProfession(Villager.Profession.NITWIT);
-                v.setCareer(Villager.Career.NITWIT);
                 p.sendMessage(Drugs.chatPrefix() + "Crackhead created.");
                 return true;
             } else {
-                p.sendMessage(Drugs.chatPrefix() + ChatColor.RED + "Insufficient permissions to create a crackhead, ask James.");
+                p.sendMessage(Drugs.chatPrefix() + ChatColor.RED + "Insufficient permissions to create a crackhead, ask an OP.");
+                return true;
             }
         }
         return false;

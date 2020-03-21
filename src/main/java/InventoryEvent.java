@@ -25,7 +25,7 @@ public class InventoryEvent implements Listener {
     @EventHandler
     public void onInventoryClick(InventoryClickEvent e) {
 
-        if (e.getInventory().getTitle() != null && ChatColor.stripColor(e.getInventory().getTitle()).contains("Drugs")) {
+        if (e.getInventory().getSize() == 9 && e.getInventory().getHolder() == null) {
             if (e.getCurrentItem() == null || !e.getCurrentItem().hasItemMeta())
                 return;
             ItemStack item = e.getCurrentItem();
@@ -79,14 +79,14 @@ public class InventoryEvent implements Listener {
                         }
                         break;
                     case "Hash":
-                        if (p.getInventory().contains(Material.CACTUS_GREEN)){
-                            int i = getAmount(p, new ItemStack(Material.CACTUS_GREEN));
+                        if (p.getInventory().contains(Material.GREEN_DYE)){
+                            int i = getAmount(p, new ItemStack(Material.GREEN_DYE));
                             String n = Integer.toString(i);
                             EconomyResponse r = Drugs.getEconomy().depositPlayer(p, i*20);
                             if(r.transactionSuccess()) {
                                 p.sendMessage(Drugs.chatPrefix() + "You have sold " + ChatColor.YELLOW + n + ChatColor.GRAY + " Hash for " +
                                         ChatColor.YELLOW + "$" + Integer.toString(i*20) + ChatColor.GRAY + ".");
-                                p.getInventory().remove(Material.CACTUS_GREEN);
+                                p.getInventory().remove(Material.GREEN_DYE);
                             } else {
                                 p.sendMessage(Drugs.chatPrefix() + ChatColor.RED + "An Error occurred, tell James to send Ethan the console logs." );
                             }

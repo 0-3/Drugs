@@ -1,6 +1,6 @@
 name: Drugs
 main: Drugs
-version: 1.2
+version: 1.3
 author: EqualRights
 api-version: 1.13
 softdepend:

@@ -30,7 +30,7 @@ public class DrugEvent implements Listener {
                 player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 900, 5));
                 player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 900, 2));
                 player.getItemInHand().setAmount(player.getItemInHand().getAmount() - 1);
-            } else if (player.getItemInHand().getType() == Material.CACTUS_GREEN) {
+            } else if (player.getItemInHand().getType() == Material.GREEN_DYE) {
                 player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 200, 1));
                 player.getItemInHand().setAmount(player.getItemInHand().getAmount() - 1);
             }

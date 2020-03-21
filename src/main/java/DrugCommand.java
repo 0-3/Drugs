@@ -8,7 +8,7 @@ public class DrugCommand implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if (cmd.getName().equalsIgnoreCase("drug") && sender instanceof Player) {
             Player p = (Player) sender;
-            p.sendMessage(Drugs.chatPrefix() + "Drugs Plugin by Ethan v" + Drugs.ver);
+            p.sendMessage(Drugs.chatPrefix() + "Drugs Plugin by Ethan v1.3");
             return true;
         }
         return false;

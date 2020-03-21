@@ -4,6 +4,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.InventoryHolder;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.PluginDescriptionFile;
@@ -28,13 +29,12 @@ public class Drugs extends JavaPlugin {
             getServer().getPluginManager().disablePlugin(this);
             return;
         }
-        getLogger().info("Plugin Drugs by Ethan has loaded v1.2");
+        getLogger().info("Plugin Drugs by Ethan has loaded v1.3");
         getServer().getPluginManager().registerEvents(new DrugEvent(), this);
         getServer().getPluginManager().registerEvents(new InteractEvent(), this);
         getServer().getPluginManager().registerEvents(new InventoryEvent(), this);
         this.getCommand("drug").setExecutor(new DrugCommand());
         this.getCommand("crackhead").setExecutor(new CrackheadCommand());
-
     }
 
     @Override
@@ -66,7 +66,7 @@ public class Drugs extends JavaPlugin {
     }
 
     public static Inventory crackhead(){
-        Inventory drugGui = Bukkit.createInventory(null, 9, ChatColor.DARK_GRAY + "Drugs v1.2" + ChatColor.GRAY + " - Created by Ethan");
+        Inventory drugGui = Bukkit.createInventory(null, 9, ChatColor.DARK_GRAY + "Drugs v1.3" + ChatColor.GRAY + " - Programmed by Ethan");
 
         ItemStack shroomsItem = new ItemStack(Material.RED_MUSHROOM);
         ItemMeta shroomsItemMeta = shroomsItem.getItemMeta();
@@ -96,7 +96,7 @@ public class Drugs extends JavaPlugin {
         baliItem.setItemMeta(baliItemMeta);
         drugGui.setItem(5, baliItem);
 
-        ItemStack settingsItem = new ItemStack(Material.CACTUS_GREEN);
+        ItemStack settingsItem = new ItemStack(Material.GREEN_DYE);
         ItemMeta settingsItemMeta = settingsItem.getItemMeta();
         settingsItemMeta.setDisplayName(ChatColor.YELLOW + "Hash");
         List<String> hashLore = new ArrayList<>();
