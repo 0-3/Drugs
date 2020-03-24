@@ -73,7 +73,7 @@ public class Drugs extends JavaPlugin {
         shroomsItemMeta.setDisplayName(ChatColor.BLUE + "S" + ChatColor.DARK_PURPLE + "h" + ChatColor.RED + "r" + ChatColor.GREEN + "o" +
                 ChatColor.YELLOW + "o" + ChatColor.LIGHT_PURPLE + "m" + ChatColor.AQUA + "s");
         List<String> shroomLore = new ArrayList<>();
-        shroomLore.add(ChatColor.DARK_GRAY + "$50 per gram.");
+        shroomLore.add(ChatColor.DARK_GRAY + "$25 per gram.");
         shroomsItemMeta.setLore(shroomLore);
         shroomsItem.setItemMeta(shroomsItemMeta);
         drugGui.setItem(1, shroomsItem);
@@ -82,7 +82,7 @@ public class Drugs extends JavaPlugin {
         ItemMeta cokeItemMeta = cokeItem.getItemMeta();
         cokeItemMeta.setDisplayName(ChatColor.RESET + "Cocaína");
         List<String> cokeLore = new ArrayList<>();
-        cokeLore.add(ChatColor.DARK_GRAY + "$25 per gram.");
+        cokeLore.add(ChatColor.DARK_GRAY + "$15 per gram.");
         cokeItemMeta.setLore(cokeLore);
         cokeItem.setItemMeta(cokeItemMeta);
         drugGui.setItem(3, cokeItem);
@@ -91,7 +91,7 @@ public class Drugs extends JavaPlugin {
         ItemMeta baliItemMeta = baliItem.getItemMeta();
         baliItemMeta.setDisplayName(ChatColor.DARK_GREEN + "Bali");
         List<String> baliLore = new ArrayList<>();
-        baliLore.add(ChatColor.DARK_GRAY + "$20 per gram.");
+        baliLore.add(ChatColor.DARK_GRAY + "$10 per gram.");
         baliItemMeta.setLore(baliLore);
         baliItem.setItemMeta(baliItemMeta);
         drugGui.setItem(5, baliItem);
@@ -100,7 +100,7 @@ public class Drugs extends JavaPlugin {
         ItemMeta settingsItemMeta = settingsItem.getItemMeta();
         settingsItemMeta.setDisplayName(ChatColor.YELLOW + "Hash");
         List<String> hashLore = new ArrayList<>();
-        hashLore.add(ChatColor.DARK_GRAY + "$20 per gram.");
+        hashLore.add(ChatColor.DARK_GRAY + "$5 per gram.");
         settingsItemMeta.setLore(hashLore);
         settingsItem.setItemMeta(settingsItemMeta);
         drugGui.setItem(7, settingsItem);

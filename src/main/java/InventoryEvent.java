@@ -39,10 +39,10 @@ public class InventoryEvent implements Listener {
                         if (p.getInventory().contains(Material.RED_MUSHROOM) || p.getInventory().contains(Material.BROWN_MUSHROOM)){
                             int i = getAmount(p, new ItemStack(Material.RED_MUSHROOM)) + getAmount(p, new ItemStack(Material.BROWN_MUSHROOM));
                             String n = Integer.toString(i);
-                            EconomyResponse r = Drugs.getEconomy().depositPlayer(p, i*50);
+                            EconomyResponse r = Drugs.getEconomy().depositPlayer(p, i*25);
                             if(r.transactionSuccess()) {
                                 p.sendMessage(Drugs.chatPrefix() + "You have sold " + ChatColor.YELLOW + n + ChatColor.GRAY + " Shrooms for " +
-                                        ChatColor.YELLOW + "$" + Integer.toString(i*50) + ChatColor.GRAY + ".");
+                                        ChatColor.YELLOW + "$" + Integer.toString(i*25) + ChatColor.GRAY + ".");
                                 p.getInventory().remove(Material.RED_MUSHROOM);
                                 p.getInventory().remove(Material.BROWN_MUSHROOM);
                             } else {
@@ -54,10 +54,10 @@ public class InventoryEvent implements Listener {
                         if (p.getInventory().contains(Material.COCOA_BEANS)){
                             int i = getAmount(p, new ItemStack(Material.COCOA_BEANS));
                             String n = Integer.toString(i);
-                            EconomyResponse r = Drugs.getEconomy().depositPlayer(p, i*25);
+                            EconomyResponse r = Drugs.getEconomy().depositPlayer(p, i*15);
                             if(r.transactionSuccess()) {
                                 p.sendMessage(Drugs.chatPrefix() + "You have sold " + ChatColor.YELLOW + n + ChatColor.GRAY + " Coke for " +
-                                        ChatColor.YELLOW + "$" + Integer.toString(i*25) + ChatColor.GRAY + ".");
+                                        ChatColor.YELLOW + "$" + Integer.toString(i*15) + ChatColor.GRAY + ".");
                                 p.getInventory().remove(Material.COCOA_BEANS);
                             } else {
                                 p.sendMessage(Drugs.chatPrefix() + ChatColor.RED + "An Error occurred, tell James to send Ethan the console logs." );
@@ -68,10 +68,10 @@ public class InventoryEvent implements Listener {
                         if (p.getInventory().contains(Material.WHEAT)){
                             int i = getAmount(p, new ItemStack(Material.WHEAT));
                             String n = Integer.toString(i);
-                            EconomyResponse r = Drugs.getEconomy().depositPlayer(p, i*20);
+                            EconomyResponse r = Drugs.getEconomy().depositPlayer(p, i*10);
                             if(r.transactionSuccess()) {
                                 p.sendMessage(Drugs.chatPrefix() + "You have sold " + ChatColor.YELLOW + n + ChatColor.GRAY + " Bali for " +
-                                        ChatColor.YELLOW + "$" + Integer.toString(i*20) + ChatColor.GRAY + ".");
+                                        ChatColor.YELLOW + "$" + Integer.toString(i*10) + ChatColor.GRAY + ".");
                                 p.getInventory().remove(Material.WHEAT);
                             } else {
                                 p.sendMessage(Drugs.chatPrefix() + ChatColor.RED + "An Error occurred, tell James to send Ethan the console logs." );
@@ -82,10 +82,10 @@ public class InventoryEvent implements Listener {
                         if (p.getInventory().contains(Material.GREEN_DYE)){
                             int i = getAmount(p, new ItemStack(Material.GREEN_DYE));
                             String n = Integer.toString(i);
-                            EconomyResponse r = Drugs.getEconomy().depositPlayer(p, i*20);
+                            EconomyResponse r = Drugs.getEconomy().depositPlayer(p, i*5);
                             if(r.transactionSuccess()) {
                                 p.sendMessage(Drugs.chatPrefix() + "You have sold " + ChatColor.YELLOW + n + ChatColor.GRAY + " Hash for " +
-                                        ChatColor.YELLOW + "$" + Integer.toString(i*20) + ChatColor.GRAY + ".");
+                                        ChatColor.YELLOW + "$" + Integer.toString(i*5) + ChatColor.GRAY + ".");
                                 p.getInventory().remove(Material.GREEN_DYE);
                             } else {
                                 p.sendMessage(Drugs.chatPrefix() + ChatColor.RED + "An Error occurred, tell James to send Ethan the console logs." );
